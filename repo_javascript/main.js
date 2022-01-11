@@ -2,6 +2,12 @@ function random() {
     return Math.floor((Math.random() * (9999 - 0001 +1)) + 0001);
 };
 
+const productos = [];
+const codigosEnTabla = [];
+const tablaProductos = document.getElementById('tablaProductos');
+const btnGenerar = document.getElementById('generar');
+const btnAgregarStock = document.getElementById('btnAgregarStock');
+
 class Ingreso {
     constructor (codigo, modelo, marca, talle, color, stock,  precio) {
         this.codigo = codigo;
@@ -22,15 +28,6 @@ class Ingreso {
 }
 
 const producto = new Ingreso(codigo, modelo, marca, talle, color, stock, precio);
-const productos = [];
-const codigosEnTabla = [];
-
-const tablaProductos = document.getElementById('tablaProductos');
-const btnGenerar = document.getElementById('generar');
-const btnAgregarStock = document.getElementById('btnAgregarStock');
-
-
-
 
 class UI {
     addProduct(producto) {
@@ -45,9 +42,7 @@ class UI {
                             <td>${producto.precio}</td> 
                             <td><a href="#" id="${producto.codigo}" name="eliminar" class= "btn btn-outline-danger">Eliminar</a></td>
                             </tr>`
-
-        
-    
+         
         tablaProductos.appendChild(fila);
         $("#parrafo").hide();
         $("#btnAgregarStock").show();
@@ -64,13 +59,9 @@ class UI {
 
     eliminarProducto(element){
         if(element.name === 'eliminar'){
-           element.parentElement.parentElement.remove();
-           
-        }
-        
+           element.parentElement.parentElement.remove();      
+        }        
     }
-
-   
 }
 
 
@@ -87,18 +78,14 @@ document.getElementById('formulario')
 
         const producto = new Ingreso(codigo, modelo, marca, talle, color, stock, precio);
 
-    
         const ui = new UI();
         ui.addProduct(producto);
         ui.generarArray(producto);
         ui.resetearFormulario();
         
         
-        e.preventDefault();
-
-        
-
-}
+        e.preventDefault();      
+    }
 )
 
 //boton elimina productos de lista html (pero no del array Productos)
