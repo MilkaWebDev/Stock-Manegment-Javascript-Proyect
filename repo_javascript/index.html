@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Ingreso Mercaderia</title>
+</head>
+<body>
+    
+   
+    <nav class="navbar navbar-light bg-light">
+        <a href="#" class="navbar-brand">
+            <h1>Ingreso de Mercaderia</h1>
+        </a>
+        <a href="busqueda.html">Ir a busqueda</a>
+    </nav>
+    
+    <div class="container">
+        <div id="App" class="row pt-5">
+            <div class="col-md-12">
+                <div class="card">
+                    <form id="formulario" action="" class="card-body" autocomplete="off">
+
+
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <h4>Ingrese codigo:</h4>
+
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-10">
+                                <input type="text" id="codigo" placeholder="codigo" class="form-control">
+                            </div>
+                            <div class="col-md-2">
+                                <input class="btn btn-light" id="generar" type="button" value="Generar">
+                            </div>
+                        </div>
+                        
+                            
+
+                        <div class="form-group row pt-3">
+                            <div class="col-md-1">
+                                <p>Modelo:</p>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="modelo" placeholder="descripcion" class=" form-control p-3">
+                            </div>
+                            <div class="col-md-1">
+                                <p>Marca:</p>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="marca"  class=" form-control p-3">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-1">
+                                <p>Talle:</p>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="number" id="talle" class="form-control">
+                            </div>
+
+                            <div class="col-md-1">
+                                <p>Color:</p>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" id="color" class="form-control">
+                            </div>
+                            <div class="col-md-1">
+                                <p>Stock:</p>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="number" id="stock" class="form-control">
+                            </div>
+                        </div>
+                            
+                        <div class="row">
+                            <div class="col-md-1">
+                                <p>Costo:</p>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="number" id="precio" placeholder="precio de costo" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-end pt-4">
+                            
+                            <input type="submit" class="btn btn-success"  value="Agregar">
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-12 card">
+                <div class="card-body">
+                    <h4>Productos Agregados recientemente</h4>
+
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col">COD</th>
+                                <th scope="col">Modelo</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Talle</th>
+                                <th scope="col">Color</th>
+                                <th scope="col">Stock</th>
+                                <th scope="col">Precio</th>
+                                
+                            </tr>
+                            </thead>
+                            <tbody id="tablaProductos">
+                            
+                            </tbody>
+
+                        </table>
+                    
+                        <div>
+                            <p class="alert alert-warning alert-dismissible fade show" role="alert" id="parrafo">No agrego productos aun</p>
+                        </div>     
+
+                        <div class="row">
+                            <div class="d-grid gap-2 mx-auto">
+                                <button class="btn btn-primary" id="btnAgregarStock" type="button" style="display: none;">Agregar Productos al Stock Permanente</button>
+                        
+                            </div>
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+
+        
+      
+        
+        
+    </div>
+
+
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
